@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <form id="formContacto">
+        <label>Nombre</label>
+        <input 
+            type="text" 
+            name="nombre" 
+            id="nombre"
+            placeholder="Introduce tu nombre"
+            required
+        >
+        <label>Correo electrónico</label>
+        <input 
+            type="email" 
+            name="email" 
+            id="email"
+            placeholder="Introduce tu correo"
+            required
+        >
+        <label>Mensaje</label>
+        <textarea
+            name="mensaje" 
+            id="mensaje"
+            placeholder="Introduce tu mensaje"
+            required
+        >
+        </textarea>
+        <label>Imagen</label>
+        <input 
+            type="url" 
+            name="imagen" 
+            id="imagen"
+            placeholder="Introduce tu url"
+            required
+        >
+        <button class="botonAñadir">Log in</button>
+    </form>
+    <button id="borrarTodo">Borrar todos los contactos</button>
+</section>
+
+
+
+<section id="personas">
+</section>
+<script src="./script.js"></script>
+</body>
+</html>
