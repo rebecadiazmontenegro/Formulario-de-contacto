@@ -66,51 +66,7 @@ const printUser = (nombre, email, mensaje, url = false, docId) => {
         
     //Ejercicio 5
 
-    let editMode = false;
-let editDocId = null; // Guarda el ID del contacto que estamos editando
-
-const form = document.getElementById("formContacto");
-
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const usuario = {
-        nombre: document.getElementById("nombre").value,
-        email: document.getElementById("email").value,
-        mensaje: document.getElementById("mensaje").value,
-        url: document.getElementById("imagen").value
-    };
-
-    if(editMode && editDocId) {
-        // Si estamos editando, actualizamos el documento existente
-        db.collection("personas").doc(editDocId).update(usuario)
-            .then(() => {
-                alert(`Documento ${editDocId} actualizado correctamente`);
-                personas.innerHTML = "";
-                readAll();
-                form.reset();
-                editMode = false;
-                editDocId = null;
-            })
-            .catch((error) => console.error("Error actualizando documento:", error));
-    } else {
-        // Si no estamos editando, creamos un nuevo documento
-        createUser(usuario);
-    }
-});
-
-botonEditar.addEventListener("click", () => {
-    // Cargamos los datos del contacto en el formulario
-    document.getElementById("nombre").value = nombre;
-    document.getElementById("email").value = email;
-    document.getElementById("mensaje").value = mensaje;
-    document.getElementById("imagen").value = url;
-
-    // Activamos el modo editar y guardamos el ID
-    editMode = true;
-    editDocId = docId;
-});
-
+    
         
     //Ejercicio 6
     botonBorrar.addEventListener("click", () => {
