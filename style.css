@@ -1,4 +1,79 @@
+
+section {
+    margin: 20px;
+}
+
+#formContacto {
+  width: 500px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+#formContacto label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#formContacto input,
+#formContacto textarea {
+  width: 480px;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #9f9f9f;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Botón */
+#formContacto .botonAñadir {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#formContacto .botonAñadir:hover {
+  background-color: black;
+  color: white;
+}
+
 img {
     width: 300px;
     height: 400px;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 16px;
+    align-items: center;
+    padding: 8px 8px;
+}
+
+button.botonEditar {
+    margin-top: 16px;
 }
